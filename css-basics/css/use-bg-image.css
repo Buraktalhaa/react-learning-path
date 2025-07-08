@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+
+.box {
+  background-color: #9a7272;
+  min-height: 400px;
+  text-align: center;
+  background-image: url(/css-basics/public/dog.jpeg);
+
+  /* yatayda kac tane oldugunu belirledi */
+  background-size: 30%;
+  /* background-size: cover; */
+
+  /* tekrari belirledi */
+  /* background-repeat: repeat-y; */
+  background-repeat: no-repeat;
+
+  /* background-position: center; */
+  background-position: right bottom;
+
+  /* filter: blur(1px); */
+}
