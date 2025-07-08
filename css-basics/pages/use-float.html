@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            width: 50px;
+            float: left;
+            margin: 10px;
+        }
+
+        .bg-aqua{
+            background-color: aqua;
+        }
+        
+        .bg-blue{
+            background-color: blue;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+
+        .clear-fix{
+            clear: both;
+        }
+
+        main {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        main > aside {
+            width: 30%;
+            float: left;
+        }
+        main > section {
+            width: 70%;
+            float: left;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box bg-blue">Non quae aperiam sequi fugit.</div>
+    <div class="box bg-aqua">Quisquam quo suscipit magnam officia.</div>
+    <div class="box bg-aqua">Exercitationem possimus voluptas labore quis.</div>
+    <div class="box bg-blue">Nobis perspiciatis corporis vitae cum!</div>
+    <div class="box bg-aqua">Lorem ipsum dolor sit amet.</div>
+    <div class="clear-fix"></div> 
+    <div class="bg-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, aliquam!</div>
+
+    <!--  main>aside>ul>li*10>lorem1^^^section>h1>lorem10^p*3>lorem20 -->
+    <main>
+        <aside class="bg-aqua">
+            <ul>
+                <li>Lorem.</li>
+                <li>Vero?</li>
+                <li>Dolore!</li>
+                <li>A!</li>
+                <li>Veritatis.</li>
+                <li>Adipisci?</li>
+                <li>Ea!</li>
+                <li>Velit!</li>
+                <li>Adipisci!</li>
+                <li>Nesciunt.</li>
+            </ul>
+        </aside>
+        <section class="bg-blue">
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, harum?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam possimus, repudiandae accusantium aperiam ab quisquam qui assumenda dolore at laboriosam?</p>
+            <p>Distinctio nesciunt eaque dolores voluptas dolorem ipsum id delectus neque soluta porro, aperiam, autem alias, quisquam facere iste deserunt iure.</p>
+            <p>Inventore sint soluta nam ducimus necessitatibus accusamus, qui autem officiis repellat voluptate nisi fugiat! Cumque debitis ut laboriosam porro. Quas!</p>
+        </section>
+    </main>
+</body>
+</html>
