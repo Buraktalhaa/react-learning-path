@@ -1,26 +1,33 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+
 :root {
-  --white: #f1ebeb;
+  --white: #d5cece;
   --green: #2ecc71;
   --blue: #3498db;
   --yellow: #f1f13a;
   --red: #e74c3c;
-  --dark-blue: #34495e;
+  --dark: #000000;
   --light-white: #cddde1;
   --midnight: #1b4f82;
   --grey: #535c68;
   --ligt-grey: #00d2d3;
+  --dark-grey: #1d2027;
 
-  --bg-color: var(--light-white);
-  --text-color: var(--grey);
-  --body-color: var(--white);
+  --bg-color: var(--white);
+  --text-color: var(--dark);
+  --body-color: var(--light-white);
   --link-color: var(--blue);
   --link-color-hover: var(--midnight);
+
+  --box-size: 800px;
 }
 
 :root[data-theme="dark"] {
-  --bg-color: var(--dark-blue);
-  --text-color: var(--green);
-  --body-color: var(--midnight);
+  --bg-color: var(--dark-grey);
+  --text-color: var(--white);
+  --body-color: var(--dark);
+  --link-color: var(--white);
+  --link-color-hover: var(--midnight);
 }
 
 /* RESET */
@@ -32,17 +39,25 @@
 
 body {
   background-color: var(--body-color);
+  color: var(--text-color);
 }
 
-/* NAV */
-header {
+/* GENERAL */
+
+header{
+    border-bottom: 1px solid var(--link-color);
+}
+
+header,
+main {
   background-color: var(--bg-color);
   min-height: 30px;
   padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 header > nav {
-  width: 600px;
+  width: var(--box-size);
   margin: 0 auto;
 }
 
@@ -62,8 +77,6 @@ header > nav > ul:last-of-type {
 header > nav > ul > li {
   float: left;
   margin-right: 10px;
-
-
 }
 
 header > nav > ul > li > a {
@@ -73,7 +86,83 @@ header > nav > ul > li > a {
 }
 
 header > nav > ul > li > a:hover {
-    color: var(--link-color-hover);
+  color: var(--link-color-hover);
+  border-radius: 5px;
+  background-color: var(--link-color);
+}
+
+/* MAIN */
+main {
+  width: var(--box-size);
+  margin: 0 auto 30px;
+  /* main in ortada durmasini auto sagliyo */
+  border: 1px solid var(--link-color);
+  padding: 20px;
+}
+
+/* ASIDE */
+aside,
+section {
+  float: left;
+}
+
+aside {
+  width: 20%;
+  padding: 20px;
+}
+
+aside > ul {
+  list-style: none;
+}
+
+aside > ul > li {
+  margin-bottom: 10px;
+}
+
+aside > ul > li > a {
+  color: var(--link-color);
+  padding: 6px 10px;
+  display: inline-block;
+}
+
+aside > ul > li > a:hover {
+  color: var(--link-color-hover);
+}
+
+/* SECTION */
+section {
+  width: 80%;
+}
+
+/* ARTICLE */
+article,
+article > header {
+  background-color: var(--body-color);
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+article > header {
+    padding: 0;
+    border-bottom: none;
+}
+
+article > footer {
+    padding-top: 10px;
+}
+
+article > footer > a {
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid var(--link-color-hover);
     border-radius: 5px;
-    background-color: var(--ligt-grey);
 }
