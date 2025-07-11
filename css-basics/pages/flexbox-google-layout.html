@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --white: #d5cece;
+        --green: #2ecc71;
+        --blue: #3498db;
+        --yellow: #f1f13a;
+        --red: #e74c3c;
+        --dark: #000000;
+        --midnight: #1b4f82;
+        --grey: #535c68;
+        --light-white: #cddde1;
+        --ligt-grey: #00d2d3;
+        --dark-grey: #1d2027;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-white);
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+      }
+
+      .item {
+        background-color: var(--grey);
+        color: var(--white);
+      }
+
+      .item > nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .item > nav > ul > li {
+        list-style: none;
+        margin-right: 10px;
+      }
+
+      .google{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .footer{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer > ul {
+        display: flex;
+      }
+
+      .footer > ul > li{
+        display: flex;
+        margin-right: 10px;
+      }
+    </style>
+    <title>Flexbox-Google-Layout</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">
+        <nav>
+          <ul>
+            <li>Lorem.</li>
+            <li>Labore?</li>
+            <li>Optio.</li>
+            <li>Quas.</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="item google">
+          <h2>Google</h2>
+          <input type="text" placeholder="Search">
+      </div>
+      <div class="item">
+        <div>
+          Turkey
+        </div>
+        <div class="footer">
+          <ul>
+            <li>Lorem.</li>
+            <li>Quis.</li>
+            <li>Ad!</li>
+            <li>Tempora.</li>
+          </ul>
+          <ul>
+            <li>Lorem.</li>
+            <li>Minus.</li>
+            <li>Cum?</li>
+            <li>Quod?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
