@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: slategray;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: cadetblue;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            /* padding dahil 800 px yapar */
+            gap: 10px;
+            /* bosluklar birakir ama margin-right gibi en sagdakinde birakmaz mesela */
+        }
+
+        .card {
+            box-sizing: border-box;
+            padding: 10px 5px;
+            border: 1px solid darkcyan;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            /* bulundugun yeri kapla */
+            flex-grow: 1;
+            flex-basis: 300px;
+        }
+
+        .card > img {
+            width: 100%;
+            background-color: rgb(53, 96, 96);
+            padding: 4px;
+            border-radius: 4px;
+            border: 1px solid darkslategray;
+            box-sizing: border-box;
+        }
+
+        .big-card {
+            flex-grow: 4;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://picsum.photos/id/231/500/300" alt="">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, tenetur.</p>
+            <p>Suscipit consectetur id, non minima veniam reiciendis accusantium quod repudiandae.</p>
+        </div>
+        <div class="card big-card">
+            <img src="https://picsum.photos/id/232/500/300" alt="">
+            <h2>Amet, necessitatibus enim.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, est.</p>
+            <p>Omnis praesentium quasi officia, fugiat reprehenderit provident voluptatum? Reiciendis, nesciunt.</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/233/500/300" alt="">
+            <h2>Rerum, perferendis minus?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ipsum.</p>
+            <p>Sit adipisci, in voluptatum quasi ut voluptas omnis quod molestiae!</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/234/500/300" alt="">
+            <h2>Quasi, perspiciatis quas!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quasi.</p>
+            <p>Quaerat dolores quia, aut deserunt quam nihil et mollitia aspernatur.</p>
+        </div>
+    </div>
+</body>
+</html>
