@@ -1,0 +1,4 @@
+aside > div.list-group {
+    position: sticky;
+    top: 60px;
+}

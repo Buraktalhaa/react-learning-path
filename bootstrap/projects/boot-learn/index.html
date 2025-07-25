@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- data-bs-theme="dark" -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bootstrap Project 1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- TODO: NAV -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BTM</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Communication</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV END -->
+
+    <!-- TODO: INFO -->
+    <div class="container-fluid" id="info">
+      <div class="row bg-dark text-light p-5 align-items-center">
+        <div class="col-sm-4">
+          <!-- Carousel Info -->
+          <div id="btmInfo" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#btmInfo"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#btmInfo"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#btmInfo"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h2>Firmamizin Vizyonu</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis dolore eum debitis veritatis, totam libero
+                  doloremque placeat illum maiores sapiente.
+                </p>
+                <p>
+                  Nihil est quasi, tempora labore numquam, ex voluptatum
+                  repellat impedit voluptates iusto rerum ipsam, quam eaque
+                  sequi repudiandae! Voluptas, quae!
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h2>Firmamizin Misyonu</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis dolore eum debitis veritatis, totam libero
+                  doloremque placeat illum maiores sapiente.
+                </p>
+                <p>
+                  Nihil est quasi, tempora labore numquam, ex voluptatum
+                  repellat impedit voluptates iusto rerum ipsam, quam eaque
+                  sequi repudiandae! Voluptas, quae!
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h2>Firmamizin Sunduklari</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis dolore eum debitis veritatis, totam libero
+                  doloremque placeat illum maiores sapiente.
+                </p>
+                <p>
+                  Nihil est quasi, tempora labore numquam, ex voluptatum
+                  repellat impedit voluptates iusto rerum ipsam, quam eaque
+                  sequi repudiandae! Voluptas, quae!
+                </p>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#btmInfo"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#btmInfo"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Carousel Info End -->
+        </div>
+
+        <div class="col-sm-8">
+          <!-- Carousel Img -->
+          <div id="btmImg" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#btmImg"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#btmImg"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#btmImg"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#btmImg"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://picsum.photos/id/17/1200/350"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://picsum.photos/id/41/1200/350"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>
+                    Some representative placeholder content for the second
+                    slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://picsum.photos/id/62/1200/350"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://picsum.photos/id/69/1200/350"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#btmImg"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#btmImg"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Carousel Img End -->
+        </div>
+      </div>
+    </div>
+    <!-- INFO END -->
+
+    <!-- TODO: CONTAINER -->
+    <div class="container" id="hero">
+      <!-- Hero Info -->
+      <div
+        class="row justify-content-center text-center rounded my-5 p-5 border shadow"
+      >
+        <div class="col-sm-6">
+          <h1 class="display-4">BTM is always with you.</h1>
+          <p class="lead">Gelecek <mark>sizin ellerinizde</mark></p>
+          <p class="lead">
+            Reprehenderit incidunt ab quis amet itaque deserunt libero. Sed,
+            nemo.
+          </p>
+          <p class="lead">
+            Quae deserunt blanditiis eos maiores. Similique mollitia nesciunt
+            laborum facilis.
+          </p>
+        </div>
+      </div>
+      <!-- Hero Info End -->
+
+      <!-- TODO: Cards -->
+      <div class="row" id="products">
+        <div class="col-sm-6">
+          <div class="card mb-3 shadow">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://picsum.photos/id/37/400/600"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content.Some quick example text to
+                    build on the card title.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Last updated 3 mins ago</small
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/146/400/240"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/147/400/240"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cards End -->
+
+      <!-- TODO: Aside and Content -->
+      <div class="row my-5">
+        <aside class="col-sm-3">
+          <!-- Aside Info -->
+          <div class="list-group shadow">
+            <a href="#info" class="list-group-item list-group-item-action"
+              >Information</a
+            >
+            <a href="#products" class="list-group-item list-group-item-action"
+              >Products</a
+            >
+            <a href="#articles" class="list-group-item list-group-item-action"
+              >Articles</a
+            >
+            <a href="#images" class="list-group-item list-group-item-action"
+              >Images</a
+            >
+          </div>
+        </aside>
+        <section class="col-sm-9" id="articles">
+          <!-- Section Info -->
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/11/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+              sunt aut laudantium error molestiae, maxime perspiciatis harum
+              temporibus at autem?
+            </p>
+            <p>
+              Sit error molestias quisquam sint eveniet? Esse voluptatem, sint
+              recusandae repellat iusto dolor porro eos beatae nisi aliquid vero
+              possimus?
+            </p>
+            <p>
+              Amet eaque voluptate optio dolorem vitae eligendi ipsam facere?
+              Fugit recusandae repellat dolores vero odit architecto accusamus
+              vel culpa aliquid.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/17/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+              enim sed. Facilis modi accusantium adipisci itaque pariatur atque
+              soluta iure!
+            </p>
+            <p>
+              Suscipit id harum non incidunt porro explicabo reiciendis
+              officiis, dolorum quod doloremque nemo ex consequatur inventore
+              ipsam. Debitis, quia illum!
+            </p>
+            <p>
+              Asperiores placeat, cupiditate voluptatem repellat repellendus
+              impedit quaerat quae autem nobis optio architecto suscipit
+              deleniti ut voluptates dolor et fugiat.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/21/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae
+              vero accusantium asperiores repudiandae ut iste enim debitis
+              laborum consequatur.
+            </p>
+            <p>
+              Sed corporis ullam harum, reprehenderit laboriosam impedit cumque
+              iste modi voluptates earum vero saepe nulla! Voluptate magnam
+              pariatur tenetur odit!
+            </p>
+            <p>
+              Odit alias cum minus vero corrupti beatae ad exercitationem neque
+              autem, vitae natus reiciendis quidem optio, incidunt eos quibusdam
+              sequi!
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/126/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nihil
+              natus facere labore dicta repudiandae nostrum sed mollitia nulla
+              vitae!
+            </p>
+            <p>
+              Quam earum laudantium provident repellendus adipisci! Nam, dolorum
+              sapiente autem neque pariatur nemo illum vitae quae cum quod
+              assumenda? Ratione?
+            </p>
+            <p>
+              Similique ullam repudiandae dolor ipsum, eum reiciendis suscipit
+              eaque assumenda quia, commodi voluptatem magni exercitationem hic
+              consequuntur maxime amet vel.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/139/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/48/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 6</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/32/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 7</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/122/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 8</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/19/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 9</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+
+          <article class="card p-3 border shadow mb-3">
+            <img
+              src="https://picsum.photos/id/99/600/240"
+              class="img-thumbnail w-100 mb-3"
+              alt=""
+            />
+            <h2>Article 10</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              officiis excepturi enim nulla. Nobis, amet nam sunt fuga similique
+              quidem?
+            </p>
+            <p>
+              Explicabo, non. Laborum in recusandae corporis ex esse labore
+              dolorum voluptatem alias repellendus, cumque molestiae.
+              Dignissimos nam quis asperiores voluptas?
+            </p>
+            <p>
+              Quaerat blanditiis error aspernatur consectetur soluta quasi
+              itaque voluptate at reprehenderit officia rerum modi, neque id
+              dolorum minima magnam et.
+            </p>
+          </article>
+        </section>
+      </div>
+      <!-- Aside and Content End -->
+    </div>
+    <!-- CONTAINER END -->
+
+    <!-- CONTAINER IMAGES -->
+    <div class="container-fluid my-5" id="images">
+      <div class="row my-2">
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/501/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/502/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/503/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/504/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/505/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/506/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/507/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/508/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/509/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://picsum.photos/id/510/600/240"
+            alt=""
+            class="img-thumbnail w-100"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- CONTAINER IMAGES END -->
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-5 border-top bg-light">
+        <div class="container">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a href="#" class="nav-link px-3 text-muted">Main Page</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-3 text-muted">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-3 text-muted">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-3 text-muted">Contact</a>
+            </li>
+          </ul>
+      
+          <p class="text-center text-muted mb-3">© 2025 Company, Inc</p>
+      
+          <div class="d-flex justify-content-center gap-4">
+            <a href="#" class="text-muted" aria-label="Twitter">
+              <i class="bi bi-twitter fs-4"></i>
+            </a>
+            <a href="#" class="text-muted" aria-label="Instagram">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
+            <a href="#" class="text-muted" aria-label="Facebook">
+              <i class="bi bi-facebook fs-4"></i>
+            </a>
+            <a href="#" class="text-muted" aria-label="LinkedIn">
+              <i class="bi bi-linkedin fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+
+    <!-- FOOTER END -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
