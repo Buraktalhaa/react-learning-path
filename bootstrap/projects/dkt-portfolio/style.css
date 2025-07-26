@@ -1,0 +1,37 @@
+aside {
+    height: calc(100vh - 56px);
+    top: 56px;
+    position: sticky;
+    overflow: hidden;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  aside img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  aside img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive: küçük ekranlarda aside gizlensin */
+  @media (max-width: 767.98px) {
+    aside {
+      display: none;
+    }
+  }
+
+  h2.section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #0d6efd;
+    padding-bottom: 0.5rem;
+  }
+
+  .card-title {
+    color: #0d6efd;
+  }
