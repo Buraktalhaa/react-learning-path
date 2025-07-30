@@ -6,6 +6,13 @@
 // 4: return icinde aciklama icin yine susluParantez Kullanilmali {/* aciklama.. */}
 // 5: style bilgisi {js icinde {obj olcak sekilde olmalidir}}
 
+import { ButtonComponent } from "./components/button"
+import { IMAGES, ImgThumbnail } from "./components/ImgThumbnail"
+import { ITEMS, UserList } from "./components/UserList"
+
+// export default verdigimiz icin componentden gelen fonksiyonun adini burada degistirebiliriz
+import PcNamesss from "./components/UserList"
+
 export default function App() {
     const userName = "Burak"
     const users = ['Burak', 'Talha', 'Memis']
@@ -54,6 +61,8 @@ export default function App() {
                 {mapUsers}
             </ul >
 
+
+
             {/* Onemli */}
             <ul>
                 {products
@@ -62,14 +71,32 @@ export default function App() {
                         <li key={item.id}>{item.name}</li>
                     )}
             </ul>
+
+
+
+            {/*  */}
+            <UserList></UserList>
+            {ITEMS.map((item, index) =>
+                <span key={index}>{item}</span>
+            )}
+
+
+            {/* 10 tane component cagirma isi */}
+            {[...Array(10)].map((item, index) => <UserList key={index}></UserList>)}
+
+
+            {/* export default kullanimi */}
+            <PcNamesss></PcNamesss>
+
+            <ButtonComponent className="btn btn-primary" info="1"></ButtonComponent>
+
+
+            {/* Fonksiyon olarak gonderme  */}
+            <ImgThumbnail imgSrc="https://picsum.photos/id/239/600/300" />
+
+            {/* Topku fotolari gostermelk icin */}
             
-            <ImgThumbnail />
+            {IMAGES.map((item, index) => <ImgThumbnail key={index} imgSrc={item}></ImgThumbnail>)}
         </>
     )
-}
-
-// Bu sekilde yazarak birden fazla yerde kullanabiliriz
-// function buyuk harfle baslamali
-function ImgThumbnail () {
-    return <img src="https://picsum.photos/id/237/600/250" alt="" style={{padding: "4px", border:"1px solid #bdc3c7", borderRadius: "8px"}}/>
 }
