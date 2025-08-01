@@ -6,12 +6,15 @@
 // 4: return icinde aciklama icin yine susluParantez Kullanilmali {/* aciklama.. */}
 // 5: style bilgisi {js icinde {obj olcak sekilde olmalidir}}
 
-import { ButtonComponent } from "./components/button"
+import { ButtonComponent } from "./components/Button"
+import { Card, ChildrenCard } from "./components/Card"
+import { ConditionalRenderedUserList } from "./components/ConditionalRenderedUserList"
 import { IMAGES, ImgThumbnail } from "./components/ImgThumbnail"
 import { ITEMS, UserList } from "./components/UserList"
 
 // export default verdigimiz icin componentden gelen fonksiyonun adini burada degistirebiliriz
 import PcNamesss from "./components/UserList"
+import { INFO } from "./data/info"
 
 export default function App() {
     const userName = "Burak"
@@ -95,8 +98,41 @@ export default function App() {
             <ImgThumbnail imgSrc="https://picsum.photos/id/239/600/300" />
 
             {/* Topku fotolari gostermelk icin */}
-            
+
             {IMAGES.map((item, index) => <ImgThumbnail key={index} imgSrc={item}></ImgThumbnail>)}
+
+
+
+
+
+
+            <hr />
+            <Card imgSrc="https://picsum.photos/id/239/600/300" imgAlt="Foto deneme" title="Burak" />
+
+
+
+
+
+            <hr />
+            {/* Children kullanimi */}
+            <ChildrenCard
+                imgSrc="https://picsum.photos/id/240/600/300"
+                imgAlt="Foto deneme"
+                title="Talha"
+                dataId="121">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Vel unde deserunt aliquam nam!</p>
+                <p>Nemo asperiores vitae in dolorem.</p>
+            </ ChildrenCard>
+
+
+
+            <hr />
+            {/* Conditional Rendering */}
+            <ConditionalRenderedUserList isActive={false}></ConditionalRenderedUserList>
+
+            <h2>Optional Chaining</h2>
+            { INFO.products?.map((product, index) => <li key={index}>{product}</li>)}
         </>
     )
 }

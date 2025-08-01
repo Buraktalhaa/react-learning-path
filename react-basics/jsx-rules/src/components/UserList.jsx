@@ -1,8 +1,10 @@
 export function UserList(){
     return (
         <>
-        <h3>Burak Talha</h3>
-        <h4>Memis</h4>
+        <h2>Kullanici Listesi</h2>
+        <ul>
+            
+        </ul>
         </>
     )
 }
