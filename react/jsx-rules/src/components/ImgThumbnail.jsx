@@ -10,7 +10,9 @@ export function ImgThumbnail(props) {
                 padding: "4px", 
                 border: "1px solid #bdc3c7",
                 borderRadius: "8px",
-                marginBottom: "5px"
+                marginBottom: "5px",
+                boxSizing:"border-box",
+                maxWidth:"100%"
             }} />)
 }
 
