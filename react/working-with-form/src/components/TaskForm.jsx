@@ -40,8 +40,9 @@ export default function TaskForm() {
                 [event.target.name]: event.target.type === "checkbox" ? event.target.checked : event.target.value
             }
         })
-    }
 
+        console.log(formData);
+    }
 
     function removeTask(uuid) {
         setTasks(prev => prev
