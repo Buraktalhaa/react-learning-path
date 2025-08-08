@@ -1,23 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TaskList from "./TaskList";
 import { v4 as uuidv4 } from 'uuid'
 
 export default function TaskForm() {
     const emptyForm = {
         task: "",
-        priority: false
+        priority: false,
+        isDone: false
     }
     const [formData, setFormData] = useState(emptyForm)
     const [tasks, setTasks] = useState([])
+    const [taskChangeCount, setTaskChangeCount] = useState(0)
+
+    // sayfa ilk acildiginda islem yap
+    useEffect(() => {
+        const localStorageTasks = JSON.parse(localStorage.getItem("tasks"))
+        setTasks(localStorageTasks ?? [])
+    }, [])
+
+    // tasks bilgisi degisince islem yap
+    useEffect(() => {
+        console.log(taskChangeCount);
+        
+        if (taskChangeCount > 0) {
+            localStorage.setItem("tasks", JSON.stringify(tasks))
+        }
+
+    }, [taskChangeCount])
 
     function handleFormSubmit(event) {
         event.preventDefault()
-        if(formData.isEdited){
+        if (formData.isEdited) {
             const taskIndex = tasks.findIndex(item => item.uuid === formData.uuid)
             // dogrudan degistirmek yerine kopyasini alip degistirdik
             const newTasks = tasks.slice()
             // index ile sadece bir tane yeri degistirdik
-            newTasks[taskIndex] = {...formData}
+            newTasks[taskIndex] = { ...formData }
             setTasks(newTasks)
         }
 
@@ -27,7 +45,7 @@ export default function TaskForm() {
                 [formData, ...prev]
             )
         }
-
+        setTaskChangeCount(prev => prev + 1)
         setFormData(emptyForm)
         event.target.reset()
     }
@@ -44,20 +62,41 @@ export default function TaskForm() {
         console.log(formData);
     }
 
+
+
     function removeTask(uuid) {
         setTasks(prev => prev
             .filter(item => item.uuid !== uuid))
+        setTaskChangeCount(prev => prev + 1)
     }
+
 
 
     function editTask(uuid) {
         const task = tasks.find(item => item.uuid === uuid)
-        setFormData({...task, isEdited:true})
+        setFormData({ ...task, isEdited: true })
+        setTaskChangeCount(prev => prev + 1)
     }
 
 
+
+    function doneTask(uuid) {
+        const taskIndex = tasks.findIndex(item => item.uuid === uuid)
+        const task = tasks[taskIndex]
+        task.isDone = !task.isDone
+        // dogrudan degistirmek yerine kopyasini alip degistirdik
+        const newTasks = tasks.slice()
+        // index ile sadece bir tane yeri degistirdik
+        newTasks[taskIndex] = task
+        setTasks(newTasks)
+        setTaskChangeCount(prev => prev + 1)
+    }
+
+
+
+
     return (<>
-        <TaskList removeTask={removeTask} tasks={tasks} editTask={editTask}></TaskList>
+        <TaskList removeTask={removeTask} tasks={tasks} editTask={editTask} doneTask={doneTask}></TaskList>
         <form onSubmit={handleFormSubmit}>
             <div className="row mb-3">
                 <label htmlFor="task" className="col-sm-2 col-form-label">Task</label>
