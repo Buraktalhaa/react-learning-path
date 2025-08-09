@@ -40,3 +40,4 @@ http://localhost:3000
 - [ ] Implementing the Login System using localStorage
 - [ ] If the user is logged in, allowing them to log out (localStorage)
 - [ ] If the user is logged in, allowing them to add products to favorites (localStorage)
+- [ ] If the user is logged in, can go to favorites page 
