@@ -29,10 +29,10 @@ http://localhost:3000
 
 ### Features
 
-- [ ] Installation of React Router DOM and Bootstrap
-- [ ] Creating the Navbar
-- [ ] Building the Page Structure
-- [ ] Enabling navigation to pages using React Router DOM
+- [x] Installation of React Router DOM and Bootstrap
+- [x] Creating the Navbar
+- [x] Building the Page Structure
+- [x] Enabling navigation to pages using React Router DOM
 - [ ] Creating the Products section
 - [ ] Displaying 10 products on the home page
 - [ ] Creating the Product Layout → Categories and links to the last 5 products
