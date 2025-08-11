@@ -33,10 +33,10 @@ http://localhost:3000
 - [x] Creating the Navbar
 - [x] Building the Page Structure
 - [x] Enabling navigation to pages using React Router DOM
-- [ ] Creating the Products section
-- [ ] Displaying 10 products on the home page
-- [ ] Creating the Product Layout → Categories and links to the last 5 products
-- [ ] Opening a Product Detail Page when a product is clicked
+- [x] Creating the Products section
+- [x] Displaying 10 products on the home page
+- [x] Creating the Product Layout → Categories and links to the last 5 products
+- [x] Opening a Product Detail Page when a product is clicked
 - [ ] Implementing the Login System using localStorage
 - [ ] If the user is logged in, allowing them to log out (localStorage)
 - [ ] If the user is logged in, allowing them to add products to favorites (localStorage)
