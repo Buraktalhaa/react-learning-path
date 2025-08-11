@@ -1,6 +1,7 @@
-import {Link, NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
-export default function Navbar() {
+export default function Navbar({ user, handleLogout }) {
+    
     return (<>
         <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3" data-bs-theme="dark">
             <div className="container">
@@ -15,6 +16,14 @@ export default function Navbar() {
                         <NavLink className="nav-link" to="/products">Products</NavLink>
                         <NavLink className="nav-link" to="/about-us">About Us</NavLink>
                         <NavLink className="nav-link" to="/communication">Communication</NavLink>
+
+                        {user && user.id
+                            ? <>
+                                <NavLink className="nav-link" to="/favorites">Favorites</NavLink>
+                                <button className="nav-link" onClick={handleLogout}>Logout ({user.name})</button>
+                            </>
+                            : <NavLink className="nav-link" to="/login">Login</NavLink>
+                        }
                     </div>
                 </div>
             </div>
