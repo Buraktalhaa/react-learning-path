@@ -3,41 +3,29 @@ import Home from "../pages/Home"
 import Communication from "../pages/Communication"
 import About from "../pages/About"
 import PageNotFound from "../pages/PageNotFound"
-import { Category, Product, ProductsLayout } from "../products"
+import { Category, Product } from "../products"
 import { Products } from "../products"
 import Login from "../pages/Login"
 import Fav from "../pages/Fav"
 import PrivateRoute from "../../PrivateRoute"
+import ProductLayout from "../products/ProductsLayout"
 
+export default function SiteRoutes({handleLogin, user, children}) {
 
-export default function SiteRoutes({ handleLogIn, user , loading}) {
-    
-    return (<>
-        <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about-us" element={<About />}></Route>
-            <Route path="/communication" element={<Communication />}></Route>
-            <Route path="/products" element={<ProductsLayout />}>
-                <Route index={true} element={<Products />}></Route>
-                <Route path="category/:categoryName" element={<Category />}></Route>
-                <Route path="product/:productId" element={<Product />}></Route>
-            </Route>
-
-            {/* Private Route */}
-            <Route path="/favorites"
-                element={
-                    <PrivateRoute user={user} loading={loading}>
-                        <Fav></Fav>
-                    </PrivateRoute>
-                }
-            >
-            </Route>
-
-            {/* Login */}
-            <Route path="/login" element={<Login handleLogin={handleLogIn} />}></Route>
-
-            {/* Other pages */}
-            <Route path="*" element={<PageNotFound />}></Route>
-        </Routes>
-    </>)
-}
+    return (
+      <Routes>
+        <Route path='/' element={<Home user={user} />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Communication />} />
+        <Route path='/products' element={<ProductLayout />}>
+          <Route index={true} element={<Products user={user} />} />
+          <Route path='category/:categoryName' element={<Category user={user} />} />
+          <Route path='product/:productId' element={<Product user={user} />} />
+        </Route>
+        <Route path='/login' element={<Login handleLogin={handleLogin} />} />
+        <Route path='/fav' element={<PrivateRoute user={user}><Fav /></PrivateRoute>} />
+  
+        <Route path='*' element={<PageNotFound />} />
+      </Routes>
+    )
+  }
