@@ -2,7 +2,9 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ProductCard from "./ProductCard"
 
-export default function Category() {
+export default function Category({user}) {
+    console.log("Category user", user);
+    
     // const params = useParams()
     // console.log(params);
     // params categoryName i veriyor. Url den dolayı
@@ -21,7 +23,7 @@ export default function Category() {
         <>
             <h1>Category: {categoryName.toUpperCase()}</h1>
             <div className="row row-cols-sm-3 row-cols-md-4">
-                {categoryProducts.map(item => <ProductCard key={item.id} item={item} />)}
+                {categoryProducts.map(item => <ProductCard user={user} key={item.id} item={item} />)}
             </div>
         </>
     )

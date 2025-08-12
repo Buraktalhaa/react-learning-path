@@ -6,14 +6,12 @@ import { useNavigate } from "react-router-dom"
 function App() {
   const navigate = useNavigate()
   const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true) 
 
   useEffect(() => {
     const savedUser = localStorage.getItem("user")
     if(savedUser){
       setUser(JSON.parse(savedUser))
     }
-    setLoading(false)
   }, [])
 
   function handleLogIn() {
@@ -35,7 +33,7 @@ function App() {
         <div className="row">
           <div className="col-sm-12">
 
-            <SiteRoutes handleLogIn={handleLogIn} user={user} loading={loading}></SiteRoutes>
+            <SiteRoutes handleLogIn={handleLogIn} user={user}></SiteRoutes>
 
           </div>
         </div>
