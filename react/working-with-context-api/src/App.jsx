@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SiteRoutes from './routes/SiteRoutes'
 
 
 function App() {
