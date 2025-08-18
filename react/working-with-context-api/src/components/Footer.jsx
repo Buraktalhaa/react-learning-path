@@ -1,4 +1,11 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+
 export default function Footer() {
+    // The footer component is styled with Bootstrap classes and contains links to different sections.
+
+    const { themeName } = useContext(ThemeContext);
+
     return (
         <div className="bg-dark text-light" data-bs-theme="dark">
             <div className="container">
@@ -72,7 +79,7 @@ export default function Footer() {
 
                     <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                         <p>© 2025 Company, Inc. All rights reserved.</p>
-                        <p>Theme</p>
+                        <p>Theme {themeName}</p>
                     </div>
 
                 </footer>
