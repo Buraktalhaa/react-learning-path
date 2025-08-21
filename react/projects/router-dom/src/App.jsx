@@ -9,12 +9,12 @@ function App() {
 
   return (
     <>
-      <Navbar user={user} handleLogout={handleLogout}></Navbar>
+      <Navbar></Navbar>
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
 
-            <SiteRoutes handleLogIn={handleLogIn} user={user}></SiteRoutes>
+            <SiteRoutes ></SiteRoutes>
 
           </div>
         </div>
