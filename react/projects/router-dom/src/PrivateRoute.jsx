@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Navigate } from "react-router-dom";
+import { SiteContext } from "./context/SiteContext";
 
-export default function PrivateRoute({ user, children }) {
-    console.log(user);
+export default function PrivateRoute({ children }) {
+    const { user } = useContext(SiteContext);
+
     // replace yapinca kullanici geri butouna basinca calismaz
 
     if (!user?.id) {

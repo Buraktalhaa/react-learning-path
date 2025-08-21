@@ -1,6 +1,9 @@
+import { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { SiteContext } from '../context/SiteContext'
 
-export default function Navbar({ user, handleLogout }) {
+export default function Navbar() {
+    const { user, handleLogout } = useContext(SiteContext)
     
     return (<>
         <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3" data-bs-theme="dark">
