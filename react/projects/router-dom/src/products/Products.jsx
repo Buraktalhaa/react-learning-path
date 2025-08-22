@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ProductCard } from "../products"
+import { SiteContext } from "../context/SiteContext";
 
-export default function Products({user}) {
-    console.log("Products", user);
+export default function Products() {
 
     const [last10Products, setLast10Products] = useState([])
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Products({user}) {
         <>
             <h2>Products:</h2>
             <div className="row row-cols-sm-3 row-cols-md-4">
-                {last10Products.map(item => <ProductCard user={user} item={item} key={item.id} />)}
+                {last10Products.map(item => <ProductCard item={item} key={item.id} />)}
             </div>
         </>
     )

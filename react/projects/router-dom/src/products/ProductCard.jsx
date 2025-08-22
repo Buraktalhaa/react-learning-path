@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
+import { SiteContext } from "../context/SiteContext";
+import { useContext } from "react";
 
-export default function ProductCard({ item, user }) {
-    console.log("ProductCard", user);
+export default function ProductCard({ item }) {
+    const { user } = useContext(SiteContext)
 
     const productUrl = `/products/product/${item.id}`
+
+    function handleClick(product) {
+        let localFavs = JSON.parse(localStorage.getItem("favs")) ?? []
+        const itemIndex = localFavs.findIndex(localItem => product.id === localItem.id)
+        if (itemIndex >= 0) {
+            localFavs = localFavs.filter(item => item.id !== product.id)
+        }
+        else {
+            localFavs.push({ id: product.id, title: product.title })
+        }
+        localStorage.setItem("favs", JSON.stringify(localFavs))
+        alert("Favorites updated!")
+    }
+
 
     return (
         <>
@@ -17,7 +33,7 @@ export default function ProductCard({ item, user }) {
                         <p className="card-text">{item.description.substring(0, 30)}...</p>
                         <p className="lead">{item.price}</p>
                         {
-                            user && <a href="#" className="btn btn-primary">Fav</a>
+                            user && <a href="#" className="btn btn-primary" onClick={() => handleClick(item)}>Fav</a>
                         }
                     </div>
                 </div>
