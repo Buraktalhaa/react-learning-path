@@ -10,7 +10,7 @@ import Fav from "../pages/Fav"
 import PrivateRoute from "../PrivateRoute"
 import ProductLayout from "../products/ProductsLayout"
 
-export default function SiteRoutes({handleLogIn, user, children}) {
+export default function SiteRoutes() {
 
     return (
       <Routes>
