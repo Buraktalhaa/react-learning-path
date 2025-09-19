@@ -1,5 +1,5 @@
 import { StyledButton } from "./Button.styled";
 
-export function Button({ children }) {
-  return <StyledButton>{children}</StyledButton>;
+export function Button({ children, $primary }) {
+  return <StyledButton $primary>{children}</StyledButton>;
 }
