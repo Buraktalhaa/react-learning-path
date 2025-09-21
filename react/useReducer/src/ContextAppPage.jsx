@@ -1,14 +1,14 @@
 import { useContext } from "react"
 import { SiteContext } from "./context/SiteContext"
-import { DECREMENT, RESET } from "./reducer/count"
+import { DECREMENT, INCREMENT, RESET } from "./reducer/count/count"
 
 export default function ContextAppPage() {
-    const { counter: { state, dispatch } } = useContext(SiteContext)
+    const { counter: { state: count, dispatch: counterDispatch } } = useContext(SiteContext)
     return <>
         <h2>Context App Page : Context API kullanıldı.</h2>
-        <h2>{state}</h2>
-        <button onClick={() => dispatch("INCREMENT")}>İncrement</button>
-        <button onClick={() => dispatch(DECREMENT)}>Decrement</button>
-        <button onClick={() => dispatch(RESET)}>Reset</button>
+        <h2>{count}</h2>
+        <button onClick={() => counterDispatch({ type: INCREMENT })}>İncrement</button>
+        <button onClick={() => counterDispatch({ type: DECREMENT })}>Decrement</button>
+        <button onClick={() => counterDispatch({ type: RESET })}>Reset</button>
     </>
 }
