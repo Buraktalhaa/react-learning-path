@@ -9,7 +9,7 @@ function SiteContextProvider({ children }) {
     const [todos, toDoDispatch] = useReducer(todoReducer, initial)
 
     const context = {
-         counter: { state: count, dispatch: counterDispatch },
+        counter: { state: count, dispatch: counterDispatch },
         todos: { state: todos, dispatch: toDoDispatch }
     }
 
